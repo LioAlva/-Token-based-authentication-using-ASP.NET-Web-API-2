@@ -1,0 +1,31 @@
+﻿@model FusionMVCProyectModel.Models.Login
+
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <h4>Inicio de Sesión</h4>
+        <hr />
+        <div>
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Email)
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Password)
+        </div>
+
+        <div>
+            @Html.EditorFor(model => model.RememberMe)
+            @Html.LabelFor(model => model.RememberMe)
+        </div>
+        <div>
+            <input type="submit" value="Iniciar Sesión" />
+        </div>
+    }
+</body>

@@ -1,0 +1,80 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                @Html.ActionLink("Hola " + User.Identity.GetUserId() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                @Html.ActionLink("Hola " + User.Identity.GetHashCode() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+
+            </li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a></li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Registrarse", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Controlando el acceso a aplicacion ASP.NET MVC</h2>
+
+<div>
+    @Html.ActionLink("Contenido para usuarios autentificados", "AuthenticatedUsers")
+</div>
+
+<body>
+    @Html.ActionLink("Para juan y Alejandra", "Payments")
+</body>
+
+<div>
+    @Html.ActionLink("Para Administradores", "AdminUsers")
+</div>
+
+<div>
+
+    @Html.ActionLink("Para Administradores y Recursos Humanos", "AdminAndRH")
+
+</div>
+
+<div>
+    @Html.ActionLink("Iniciar sesión", "Login", "Account")
+</div>
+
+<div>
+    @Html.ActionLink("Cerrar sesión", "LogOff", "Account")
+</div>
+
+<div>
+
+    @Html.ActionLink("Mostrar Claims", "GetClaims")
+
+</div>
+
+<div>
+    @ViewData["FullUserName"]
+</div>
+
+<div>
+    @Html.ActionLink("Mostrar Roles", "GetUserRoles")
+</div>
+
+@if (Request.IsAuthenticated)
+{
+
+    <span id="usuarioId" style="display:none">@User.Identity.Name</span>
+}

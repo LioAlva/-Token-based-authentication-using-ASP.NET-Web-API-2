@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FusionMVCProyectModel", "FusionMVCProyectModel\FusionMVCProyectModel.csproj", "{F64FF6C2-12D9-4A18-A3B6-A561E06DDDA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F64FF6C2-12D9-4A18-A3B6-A561E06DDDA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F64FF6C2-12D9-4A18-A3B6-A561E06DDDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F64FF6C2-12D9-4A18-A3B6-A561E06DDDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F64FF6C2-12D9-4A18-A3B6-A561E06DDDA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C72D4700-2B3E-4586-8373-11C46326DD06}
+	EndGlobalSection
+EndGlobal
